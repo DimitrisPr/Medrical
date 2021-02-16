@@ -8,7 +8,7 @@
 
 **Social**
 
-[![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow)  [![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/dimitrisprs/) 
+[![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/dimitrisprs/)  [![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow) 
 
 # General
 
