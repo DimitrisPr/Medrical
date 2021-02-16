@@ -1,18 +1,14 @@
 
-<img src="https://prasakis.com/github/medrical.png?new" width="200" align="right">
+<img src="https://prasakis.com/github/medrical.png?new" width="160" align="right">
 
 **Tech Stack**
 
 [![Build Status](https://img.shields.io/badge/Build%20with-Python-9CF?&logo=python)](https://img.shields.io/badge/Build%20with-python-9CF) 
 [![Build Status](https://img.shields.io/badge/Published%20on%20PyPi-v0.1.0-9CF)](https://img.shields.io/badge/Build%20with-python-9CF) [![Build with](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Build with](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
 
-<br>
-
 **Social**
 
 [![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow)  [![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/dimitrisprs/) 
-
-
 
 # General
 
