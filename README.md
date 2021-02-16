@@ -1,9 +1,11 @@
 
 <img src="https://prasakis.com/github/medrical.png" width="200" align="right">
 
-<br>
+**Tech Stack**
 
-[![Build Status](https://img.shields.io/badge/Build%20with-Python-blue)](https://img.shields.io/badge/Build%20with-python-blue) [![Build Status](https://badgen.net/pypi/v/pip)](https://img.shields.io/badge/Build%20with-python-blue) [![Built on](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Built on](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
+[![Build Status](https://img.shields.io/badge/Build%20with-Python-9CF?style=for-the-badge&logo=python)](https://img.shields.io/badge/Build%20with-python-9CF) 
+[![Build Status](https://img.shields.io/badge/Published%20on%20PyPi-v0.1.0-9CF?style=for-the-badge&logo=python)](https://img.shields.io/badge/Build%20with-python-9CF) 
+[! [![Build with](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Build with](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
 
 <br>
 
