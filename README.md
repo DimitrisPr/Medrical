@@ -1,19 +1,23 @@
 
+<img src="https://prasakis.com/github/medrical.png" width="200" align="right">
 
-<img src="https://prasakis.com/github/apachekafka.svg" width="25" align="right">
-<img src="https://prasakis.com/github/python.svg" width="25" align="right">
-<img src="https://prasakis.com/github/postgresql.svg" width="25" align="right">
+<br>
+
+<img src="https://prasakis.com/github/apachekafka.svg" width="25" align="left">
+<img src="https://prasakis.com/github/python.svg" width="25" align="left">
+<img src="https://prasakis.com/github/postgresql.svg" width="25" align="left">
 
 <br>
 
 [![Build Status](https://img.shields.io/badge/Build%20with-Python-blue)](https://img.shields.io/badge/Build%20with-python-blue) [![Build Status](https://badgen.net/pypi/v/pip)](https://img.shields.io/badge/Build%20with-python-blue) [![Built on](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Built on](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
 
 
+<br>
+
 **Social**
 
 [![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow)  [![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-9CF)](https://www.linkedin.com/in/dimitrisprs/) 
 
-<img src="https://prasakis.com/github/medrical.png" width="200" align="center">
 
 
 # General
