@@ -167,7 +167,7 @@ The following table presents briefly each medical submodule
 
 | File/Module | Brief description |
 | ------ | ------ |
-| medrical/producer/patient.py | This module simulates the biometrics of a patient (similar to the <a href="https://github.com/aiven/kafka-python-fake-data-producer" Aiven's fake Pizza Data Producer) </a>)|
+| medrical/producer/patient.py | This module simulates the biometrics of a patient similar to the [Aiven's fake Pizza Data Producer](https://github.com/aiven/kafka-python-fake-data-producer))|
 | medrical/producer/producer.py | This is a Kafka producer. It monitors patient's biometrics and publishes them as events to Kafka |
 | medrical/cli/cli.py | This module implements the Medrical's command line interface |
 | medrical/config| This module has several configuration files concerning the AVRO schemas, SSL certificates, medrical configuration etc |
