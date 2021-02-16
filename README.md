@@ -1,8 +1,8 @@
 
 
-<img src="https://prasakis.com/github/apachekafka.svg" width="30" align="right">
-<img src="https://prasakis.com/github/postgresql.svg" width="30" align="right">
-<img src="https://prasakis.com/github/python.svg" width="30" align="right">
+<img src="https://prasakis.com/github/apachekafka.svg" width="25" align="right">
+<img src="https://prasakis.com/github/python.svg" width="25" align="right">
+<img src="https://prasakis.com/github/postgresql.svg" width="25" align="right">
 
 <br>
 
