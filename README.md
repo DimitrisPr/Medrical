@@ -41,7 +41,7 @@ Prior installation, consider using a virtual enviroment
 ~$ source medrical_env/bin/activate
 ```
 
-Medrical is published on PyPi. Install it on your machine with:
+Medrical is published to PyPi. Install it on your machine with:
 
 ```sh
 ~$ pip install medrical
