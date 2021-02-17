@@ -70,7 +70,7 @@ Medrical can be configured with:
 ~$ medrical-configure
 ```
 
-The cli configuration interface requests the crediantials of Kafka, Schema and postgreSQL.
+The cli configuration interface requests the credentials of Kafka, Schema and postgreSQL.
 
 Medrical can be re-configured at a later point in time.
 
