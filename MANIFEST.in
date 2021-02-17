@@ -1,2 +1,2 @@
-recursive-include *.cfg
-recursive-include *.avsc
+include medrical/config/*.cfg
+include medrical/config/schemas/*.avsc

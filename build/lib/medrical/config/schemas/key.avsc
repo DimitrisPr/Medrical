@@ -1,0 +1,10 @@
+{
+   "name": "schema_name",
+   "type": "record",
+   "fields" : [
+     {
+       "name" : "id",
+       "type" : "string"
+     }
+   ]
+}

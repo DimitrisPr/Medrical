@@ -1,3 +1,4 @@
+MANIFEST.in
 README.md
 setup.py
 medrical/__init__.py
@@ -11,6 +12,9 @@ medrical/cli/__init__.py
 medrical/cli/cli.py
 medrical/config/__init__.py
 medrical/config/config.py
+medrical/config/pipeline.cfg
+medrical/config/schemas/biometrics.avsc
+medrical/config/schemas/key.avsc
 medrical/producer/__init__.py
 medrical/producer/patient.py
 medrical/producer/producer.py

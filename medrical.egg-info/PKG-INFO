@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: medrical
-Version: 0.1.0
+Version: 0.1.1
 Summary: Medrical is a real-time medical biometric monitoring system, powered by Apache Kafka and postgreSQL.
 Home-page: https://github.com/DimitrisPr/medrical
 Author: Dimitris Prasakis
