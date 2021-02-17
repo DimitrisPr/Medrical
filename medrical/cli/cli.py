@@ -6,6 +6,7 @@ from medrical.config.config import configure
 
 from configparser import SafeConfigParser
 import unittest
+import pathlib
 import time
 import sys
 
@@ -32,11 +33,8 @@ USAGE_STRING = """\nUsage:
 def medrical():
     
     parser = SafeConfigParser()
-    config_file_path = 'medrical/config/pipeline.cfg'
-    parser.read(config_file_path)
-
-    if parser.get('PIPELINE', 'is_configured') == 'False':
-        configure()
+    config_file = str(pathlib.Path(__file__).parent.parent.absolute()) +'/config/pipeline.cfg'
+    parser.read(config_file)
 
     f''' Medrical cli tool
         {USAGE_STRING}

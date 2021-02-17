@@ -4,6 +4,7 @@ from configparser import SafeConfigParser
 from confluent_kafka import avro
 import unittest
 import psycopg2
+import pathlib
 
 
 
@@ -11,8 +12,8 @@ import psycopg2
 class TestConnector(unittest.TestCase):
     ''' Test for JDBC POSTGRES Connector '''
     parser = SafeConfigParser()
-    config_file_path = 'medrical/config/pipeline.cfg'
-    parser.read(config_file_path)
+    config_file = str(pathlib.Path(__file__).parent.parent.absolute()) +'/medrical/config/pipeline.cfg'
+    parser.read(config_file)
 
     POSTGRES_HOST = parser.get('POSTGRES', 'postgres_host')
     POSTGRES_PORT = parser.get('POSTGRES', 'postgres_port')

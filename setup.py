@@ -14,6 +14,10 @@ setuptools.setup(
     author_email="dimitris@prasakis.com",
     description="Medrical is a real-time medical biometric monitoring system, powered by Apache Kafka and postgreSQL.",
     include_package_data = True,
+    data_files=[
+        ('schemas',['medrical/config/schemas/biometrics.avsc','medrical/config/schemas/key.avsc']),
+        ('config',['medrical/config/pipeline.cfg']),
+    ],
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/DimitrisPr/medrical",

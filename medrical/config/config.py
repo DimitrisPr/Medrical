@@ -1,24 +1,25 @@
 from configparser import SafeConfigParser 
+import pathlib
 
 def configure():
 
     parser = SafeConfigParser()
-    config_file_path = 'medrical/config/pipeline.cfg'
-    parser.read(config_file_path)
+    config_file = str(pathlib.Path(__file__).parent.absolute()) +'/pipeline.cfg'
+    parser.read(config_file)
 
     def verify_configuration(answer=''):
 
         print(f''' \n
             Please double check the configuration!
-                kafka_host: {parser.get('KAFKA', 'kafka_host')} 
-                kafka_port: {parser.get('KAFKA', 'kafka_port')} 
-                kafka_schema_registry_user: {parser.get('KAFKA', 'kafka_schema_registry_user')} 
-                kafka_schema_registry_password: {parser.get('KAFKA', 'kafka_schema_registry_password')} 
-                kafka_schema_registry_port: {parser.get('KAFKA', 'kafka_schema_registry_port')} 
-                postgres_host: {parser.get('POSTGRES', 'postgres_host')} 
-                postgres_user: {parser.get('POSTGRES', 'postgres_user')} 
-                postgres_password: {parser.get('POSTGRES', 'postgres_password')} 
-                postgres_port: {parser.get('POSTGRES', 'postgres_port')} 
+            \tkafka_host: {parser.get('KAFKA', 'kafka_host')} 
+            \tkafka_schema_registry_user: {parser.get('KAFKA', 'kafka_schema_registry_user')} 
+            \tkafka_port: {parser.get('KAFKA', 'kafka_port')} 
+            \tkafka_schema_registry_password: {parser.get('KAFKA', 'kafka_schema_registry_password')} 
+            \tkafka_schema_registry_port: {parser.get('KAFKA', 'kafka_schema_registry_port')} 
+            \tpostgres_host: {parser.get('POSTGRES', 'postgres_host')} 
+            \tpostgres_user: {parser.get('POSTGRES', 'postgres_user')} 
+            \tpostgres_password: {parser.get('POSTGRES', 'postgres_password')} 
+            \tpostgres_port: {parser.get('POSTGRES', 'postgres_port')} 
             \n''')
 
         while answer.upper() != 'N' and answer.upper() != 'Y':
@@ -37,7 +38,7 @@ def configure():
 
             verify_configuration()
         else:
-            with open(config_file_path, 'w') as config:
+            with open(config_file, 'w') as config:
                 parser.write(config)
 
             print('\nSetup successful! \nRun medrical -help for help')
@@ -66,7 +67,7 @@ def configure():
     
     parser.set('PIPELINE', 'is_configured', 'True')
 
-    with open(config_file_path, 'w') as config:
+    with open(config_file, 'w') as config:
         parser.write(config)
 
     verify_configuration()

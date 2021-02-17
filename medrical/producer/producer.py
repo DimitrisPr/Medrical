@@ -2,6 +2,7 @@ from medrical.producer.patient import Patient
 from confluent_kafka.avro import AvroProducer
 from confluent_kafka import avro
 from configparser import SafeConfigParser
+import pathlib
 import json
 import sys
 
@@ -18,8 +19,10 @@ def produce(topic_name, patient):
             patient (Patient): An Patient object
     '''
     parser = SafeConfigParser()
-    config_file_path = 'medrical/config/pipeline.cfg'
-    parser.read(config_file_path)
+    config_file = str(pathlib.Path(
+        __file__).parent.parent.absolute()) + '/pipeline.cfg'
+    parser.read(config_file)
+
     global delivered_status
     KAFKA_HOST = parser.get('KAFKA', 'kafka_host')
     KAFKA_PORT = parser.get('KAFKA', 'kafka_port')
@@ -27,10 +30,12 @@ def produce(topic_name, patient):
     SCHEMA_PASSWORD = parser.get('KAFKA', 'kafka_schema_registry_password')
     SCHEMA_PORT = parser.get('KAFKA', 'kafka_schema_registry_port')
 
+    AVRO_PATH = str(pathlib.Path(
+        __file__).parent.parent.absolute()) + '/schemas'
     VALUE_SCHEMA = open(
-        'medrical/config/schemas/biometrics.avsc').read().replace('schema_name', topic_name)
+        AVRO_PATH+'/biometrics.avsc').read().replace('schema_name', topic_name)
     KEY_SCHEMA = open(
-        'medrical/config/schemas/key.avsc').read().replace('schema_name', topic_name)
+        AVRO_PATH+'/key.avsc').read().replace('schema_name', topic_name)
 
     avroProducer = AvroProducer({
         'bootstrap.servers': f'{KAFKA_HOST}:{KAFKA_PORT}',
@@ -44,7 +49,7 @@ def produce(topic_name, patient):
     patient_biometrics = patient.get_biometrics()
     patient_id = patient.get_id()
     avroProducer.produce(topic=topic_name,
-                            value=patient_biometrics, key=patient_id, callback=error_callback)
+                         value=patient_biometrics, key=patient_id, callback=error_callback)
     avroProducer.flush()
 
     print(f'Published {patient_biometrics} to the topic "{topic_name}"')
