@@ -121,7 +121,7 @@ The Medrical configurator provides a cli interface for SSL configuration `medric
 Alternatively, the {access key, access certificate, CA certificate} = {ca.pem, service.cert, service.key} files must either be manually added to `medrical/config/ssl/` directory with the excact aforementioned names, or be programmatically added as strings in the code of the producer module `medrical/producer/producer.py`.
 
 
-<img src="https://prasakis.com/github/medrical-ssl.png" width="450">
+<img src="https://prasakis.com/github/medrical-ssl.png" width="700">
 
 
 
