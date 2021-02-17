@@ -118,7 +118,7 @@ Note that the proper configuration of the medrical application and the JDBC Conn
 ## SSL Configuration
 
 The Medrical configurator provides a cli interface for SSL configuration `medrical configure ssl`, but it is unstable and has only been tested in Linux. 
-Alternatively, the {access key, access certificate, CA certificate} = {ca.pem, service.cert, service.key} files must either be manually added to `medrical/config/ssl/` directory with the excact aforementioned names, or be programmatically added as strings in the code of the producer module `medrical/producer/producer.py`.
+Alternatively, the {access key, access certificate, CA certificate} = {ca.pem, service.cert, service.key} files must either be manually added to `medrical/config/ssl/` directory with the exact aforementioned names, or be programmatically added as strings in the code of `medrical/producer/producer.py`.
 
 
 <img src="https://prasakis.com/github/medrical-ssl.png" width="700">
@@ -137,7 +137,7 @@ Just like the configuration cli interface, medrical application can be launched 
 
 ## Medrical producer
 
-The medrical producer can be launched using:
+The medrical producer can be launched with:
 ```sh
 ~$ medrical produce
 ```
