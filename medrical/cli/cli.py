@@ -31,10 +31,9 @@ USAGE_STRING = """\nUsage:
 
 
 def medrical():
-
+    
     parser = SafeConfigParser()
-    config_file = str(pathlib.Path(
-        __file__).parent.parent.absolute()) + '/config/pipeline.cfg'
+    config_file = str(pathlib.Path(__file__).parent.parent.absolute()) +'/config/pipeline.cfg'
     parser.read(config_file)
 
     f''' Medrical cli tool

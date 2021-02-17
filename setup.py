@@ -6,18 +6,17 @@ with open("README.md", "r", encoding="utf-8") as fh:
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-
+    
 setuptools.setup(
-    name="medrical",
+    name="medrical", 
     version="0.1.10",
     author="Dimitris Prasakis",
     author_email="dimitris@prasakis.com",
     description="Medrical is a real-time medical biometric monitoring system, powered by Apache Kafka and postgreSQL.",
-    include_package_data=True,
+    include_package_data = True,
     data_files=[
-        ('schemas', ['medrical/config/schemas/biometrics.avsc',
-                     'medrical/config/schemas/key.avsc']),
-        ('config', ['medrical/config/pipeline.cfg']),
+        ('schemas',['medrical/config/schemas/biometrics.avsc','medrical/config/schemas/key.avsc']),
+        ('config',['medrical/config/pipeline.cfg']),
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -31,3 +30,5 @@ setuptools.setup(
         ],
     }
 )
+
+

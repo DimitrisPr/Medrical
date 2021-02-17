@@ -1,13 +1,11 @@
-from configparser import SafeConfigParser
+from configparser import SafeConfigParser 
 import pathlib
 import os
-
 
 def configure():
 
     parser = SafeConfigParser()
-    config_file = str(pathlib.Path(
-        __file__).parent.absolute()) + '/pipeline.cfg'
+    config_file = str(pathlib.Path(__file__).parent.absolute()) +'/pipeline.cfg'
     parser.read(config_file)
 
     def verify_configuration(answer=''):
@@ -60,17 +58,14 @@ def configure():
 
     parser.set('KAFKA', 'kafka_host', kafka_host)
     parser.set('KAFKA', 'kafka_port', kafka_port)
-    parser.set('KAFKA', 'kafka_schema_registry_user',
-               kafka_schema_registry_user)
-    parser.set('KAFKA', 'kafka_schema_registry_password',
-               kafka_schema_registry_password)
-    parser.set('KAFKA', 'kafka_schema_registry_port',
-               kafka_schema_registry_port)
+    parser.set('KAFKA', 'kafka_schema_registry_user', kafka_schema_registry_user)
+    parser.set('KAFKA', 'kafka_schema_registry_password', kafka_schema_registry_password)
+    parser.set('KAFKA', 'kafka_schema_registry_port', kafka_schema_registry_port)
     parser.set('POSTGRES', 'postgres_host', postgres_host)
     parser.set('POSTGRES', 'postgres_user', postgres_user)
     parser.set('POSTGRES', 'postgres_password', postgres_password)
     parser.set('POSTGRES', 'postgres_port', postgres_port)
-
+    
     parser.set('PIPELINE', 'is_configured', 'True')
 
     with open(config_file, 'w') as config:
@@ -79,12 +74,10 @@ def configure():
     verify_configuration()
     ssl_configure()
 
-
 def ssl_configure():
 
     print('\n--- CONFIGURE SSL ---\n\n')
-    SSL_DIR = str(pathlib.Path(
-        __file__).parent.parent.absolute()) + '/config/ssl'
+    SSL_DIR = str(pathlib.Path(__file__).parent.parent.absolute()) +'/config/ssl'
     print(f'You can either place the files manually to the path {SSL_DIR}')
     print(f'or try by using this interfcae (unstable)\n ')
 
@@ -97,6 +90,5 @@ def ssl_configure():
             os.system(f'start {SSL_DIR}')
         elif user_os.upper() == 'LINUX':
             os.system(f'nautilus {SSL_DIR}')
-    print(
-        f'\nIf this has failed, please add the SSL files manually to {SSL_DIR}.')
+    print(f'\nIf this has failed, please add the SSL files manually to {SSL_DIR}.')
     print('Run medrical -help for help')

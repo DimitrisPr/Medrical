@@ -10,8 +10,7 @@ import pathlib
 class TestProducer(unittest.TestCase):
     ''' Test for JDBC Kafka Connector '''
     parser = SafeConfigParser()
-    config_file = str(pathlib.Path(
-        __file__).parent.parent.absolute()) + '/medrical/config/pipeline.cfg'
+    config_file = str(pathlib.Path(__file__).parent.parent.absolute()) +'/medrical/config/pipeline.cfg'
     parser.read(config_file)
 
     POSTGRES_HOST = parser.get('POSTGRES', 'postgres_host')
@@ -33,3 +32,4 @@ class TestProducer(unittest.TestCase):
         delivery_status = produce(topic_name, Patient())
 
         self.assertEqual(delivery_status, True)
+

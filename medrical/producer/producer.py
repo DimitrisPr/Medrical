@@ -18,7 +18,7 @@ def produce(topic_name, patient):
             topic (str): The name of the topic (default: 'biometrics_default')
             patient (Patient): An Patient object
     '''
-
+    
     global delivered_status
     parser = SafeConfigParser()
     CONFIG_PATH = str(pathlib.Path(
