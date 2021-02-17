@@ -1,26 +1,20 @@
 
+<img src="https://prasakis.com/github/medrical.png?new" width="160" align="right">
 
-<img src="https://prasakis.com/github/apachekafka.svg" width="30" align="right">
-<img src="https://prasakis.com/github/postgresql.svg" width="30" align="right">
-<img src="https://prasakis.com/github/python.svg" width="30" align="right">
+**Tech Stack**
 
-<br>
-
-[![Build Status](https://img.shields.io/badge/Build%20with-Python-blue)](https://img.shields.io/badge/Build%20with-python-blue) [![Build Status](https://badgen.net/pypi/v/pip)](https://img.shields.io/badge/Build%20with-python-blue) [![Built on](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Built on](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
-
+[![Build Status](https://img.shields.io/badge/Build%20with-Python-9CF?&logo=python)](https://img.shields.io/badge/Build%20with-python-9CF) 
+[![Build Status](https://img.shields.io/badge/Published%20on%20PyPi-v0.1.0-9CF)](https://img.shields.io/badge/Build%20with-python-9CF) [![Build with](https://img.shields.io/badge/Built%20on-Apache%20Kafka-yellow)](https://img.shields.io/badge/Build%20with-kafka-yellow) [![Build with](https://img.shields.io/badge/Built%20on-PostgreSQL-yellow)](https://img.shields.io/badge/Build%20with-postgres-yellow) 
 
 **Social**
 
-[![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow)  [![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-9CF)](https://www.linkedin.com/in/dimitrisprs/) 
-
-<img src="https://prasakis.com/github/medrical.png" width="200" align="center">
-
+[![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/dimitrisprs/)  [![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow) 
 
 # General
 
 This is a demonstration project for <a href="https://aiven.io"> Aiven </a>
  
-Medrical is a real-time medical metric monitoring system, powered by Apache Kafka and postgreSQL. It continuously monitors patient biometrics (e.g heart rate, body temprature, systolic & diastolic blood pressure) and publishes them to Kafka topics. A JDBC connector subscribes to those topics and stores into a PostgreSQL DB table.  
+Medrical is a real-time medical metric monitoring system, powered by Apache Kafka and postgreSQL. It continuously monitors patient biometrics (e.g heart rate, body temprature, systolic & diastolic blood pressure) and publishes them to Kafka topics. A JDBC connector subscribes to those topics and stores them into a PostgreSQL DB table.  
  
 *Medrical is a wordplay derived from the phrase "medical metrics"*
 
@@ -173,7 +167,7 @@ The following table presents briefly each medical submodule
 
 | File/Module | Brief description |
 | ------ | ------ |
-| medrical/producer/patient.py | This module simulates the biometrics of a patient (similar to the <a href="https://github.com/aiven/kafka-python-fake-data-producer" Aiven's fake Pizza Data Producer) </a>)|
+| medrical/producer/patient.py | This module simulates the biometrics of a patient similar to the [Aiven's fake Pizza Data Producer](https://github.com/aiven/kafka-python-fake-data-producer)|
 | medrical/producer/producer.py | This is a Kafka producer. It monitors patient's biometrics and publishes them as events to Kafka |
 | medrical/cli/cli.py | This module implements the Medrical's command line interface |
 | medrical/config| This module has several configuration files concerning the AVRO schemas, SSL certificates, medrical configuration etc |
