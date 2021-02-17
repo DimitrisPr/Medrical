@@ -153,9 +153,9 @@ There are two unit tests currently implemented in medrical. A test for the JDBC 
 ~$ medrical test producer
 ```
 
-Thoughout testing needs to be done for later versions. 
-
 ### To Do Testing
+
+Throughout testing of later versions should include:
 
 - More unit tests for JDBC producer (e.g test that *every* new event is properly published when running in a loop continuously)
 - More unit tests for JDBC connector (e.g time needed to create a new table given a new topic,) 
