@@ -2,7 +2,7 @@ from tests.test_connector import TestConnector
 from tests.test_producer import TestProducer
 from medrical.producer.producer import produce
 from medrical.producer.patient import Patient
-from medrical.config.config import configure
+from medrical.config.config import configure, ssl_configure
 
 from configparser import SafeConfigParser
 import unittest
@@ -45,6 +45,7 @@ def medrical():
     if len(args[1:]) < 1:
         print(USAGE_STRING)
     elif args[1] == 'produce':
+        print("Launcing the producer...")
         try:
             while(True):
                 produce('biometrics_default', Patient())
@@ -61,6 +62,9 @@ def medrical():
         else:
             print(f'Error: Unit does not exist\n{USAGE_STRING}')
     elif args[1] == 'configure':
-        configure()
+        if args[2] == 'ssl':
+            ssl_configure()
+        else:
+            configure()
     else:
         print(USAGE_STRING)

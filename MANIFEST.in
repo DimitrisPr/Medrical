@@ -1,2 +1,3 @@
 include medrical/config/*.cfg
 include medrical/config/schemas/*.avsc
+include medrical/config/ssl/*

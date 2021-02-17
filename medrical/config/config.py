@@ -1,5 +1,6 @@
 from configparser import SafeConfigParser 
 import pathlib
+import os
 
 def configure():
 
@@ -41,7 +42,7 @@ def configure():
             with open(config_file, 'w') as config:
                 parser.write(config)
 
-            print('\nSetup successful! \nRun medrical -help for help')
+            print('\nKafka & PostgreSQL Setup successful!')
 
     print('\n--- SETUP MEDRICAL (medrical/config/pipeline.cfg) ---\n')
 
@@ -71,4 +72,23 @@ def configure():
         parser.write(config)
 
     verify_configuration()
+    ssl_configure()
 
+def ssl_configure():
+
+    print('\n--- CONFIGURE SSL ---\n\n')
+    SSL_DIR = str(pathlib.Path(__file__).parent.parent.absolute()) +'/config/ssl'
+    print(f'You can either place the files manually to the path {SSL_DIR}')
+    print(f'or try by using this interfcae (unstable)\n ')
+
+    answer = input('Would you like to open the SSL directory? (Y/N): ')
+    if answer.upper() == 'Y' or answer.upper() == 'YES':
+        user_os = input('What is your OS? (mac, win, linux): ')
+        if user_os.upper() == 'MAC':
+            os.system(f'open {SSL_DIR}')
+        elif user_os.upper() == 'WIN':
+            os.system(f'start {SSL_DIR}')
+        elif user_os.upper() == 'LINUX':
+            os.system(f'nautilus {SSL_DIR}')
+    print(f'\nIf this has failed, please add the SSL files manually to {SSL_DIR}.')
+    print('Run medrical -help for help')
