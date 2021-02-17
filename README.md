@@ -159,7 +159,7 @@ Throughout testing of later versions should include:
 
 - More unit tests for JDBC producer (e.g test that *every* new event is properly published when running in a loop continuously)
 - More unit tests for JDBC connector (e.g time needed to create a new table given a new topic,) 
-- Test medrical's command line client
+- Test for the Medrical's command line client
 
 ## Understanding the architecture of Medrical
 
