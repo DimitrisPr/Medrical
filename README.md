@@ -31,7 +31,7 @@ Table of Contents
   * [Medrical producer](#medrical-producer)
   * [Medrical Unit Tests](#medrical-unit-tests)
 * [Understanding Medrical's Architecture](#understanding-the-architecture-of-medrical)
-* [To Do Testing](#to-do-testing)
+* [To Do's](#to-do-testing)
 
 # Installation
 
@@ -58,7 +58,7 @@ or using the git repo
 # Configuration
 
 Medrical requires a running instance of:
-- A Kafka enviroment, with schema registry enabled
+- A Kafka enviroment, with schema registry enabled and the option `kafka.auto_create_topics_enable = true`
 - <a href="https://github.com/aiven/aiven-kafka-connect-jdbc"> A Kafka JDBC connector sink </a>
 - A postgreSQL database (ideally with TimescaleDB extension enabled for future integrations)
 
@@ -117,13 +117,13 @@ Note that the proper configuration of the medrical application and the JDBC Conn
 
 ## SSL Configuration
 
-The {access key, access certificate, CA certificate} = {ca.pem, service.cert, service.key} files must either be manually added to `medrical/config/ssl/` directory with the excact aforementioned names, or be programmatically added as strings in the code of the producer module `medrical/producer/producer.py`.
+The Medrical configurator provides a cli interface for SSL configuration `medrical configure ssl`, but it is unstable and has only been tested in Linux. 
+Alternatively, the {access key, access certificate, CA certificate} = {ca.pem, service.cert, service.key} files must either be manually added to `medrical/config/ssl/` directory with the excact aforementioned names, or be programmatically added as strings in the code of the producer module `medrical/producer/producer.py`.
 
-The JDBC connector's configuration must support several requirements including:
 
-- AVRO serialization converters
-- Topic regex
-- Dynamic topic naming
+<img src="https://prasakis.com/github/medrical-ssl.png" width="700">
+
+
 
 # How to run - Medrical Client
 
