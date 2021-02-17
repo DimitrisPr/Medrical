@@ -7,12 +7,11 @@ import psycopg2
 import pathlib
 
 
-
-
 class TestConnector(unittest.TestCase):
     ''' Test for JDBC POSTGRES Connector '''
     parser = SafeConfigParser()
-    config_file = str(pathlib.Path(__file__).parent.parent.absolute()) +'/medrical/config/pipeline.cfg'
+    config_file = str(pathlib.Path(
+        __file__).parent.parent.absolute()) + '/medrical/config/pipeline.cfg'
     parser.read(config_file)
 
     POSTGRES_HOST = parser.get('POSTGRES', 'postgres_host')
@@ -40,4 +39,3 @@ class TestConnector(unittest.TestCase):
         table_created = self.cursor.fetchone()[0]
 
         self.assertEqual(table_created, True)
-
