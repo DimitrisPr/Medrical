@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
     
 setuptools.setup(
     name="medrical", 
-    version="0.1.1",
+    version="0.1.10",
     author="Dimitris Prasakis",
     author_email="dimitris@prasakis.com",
     description="Medrical is a real-time medical biometric monitoring system, powered by Apache Kafka and postgreSQL.",

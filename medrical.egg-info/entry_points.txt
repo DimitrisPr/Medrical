@@ -1,0 +1,4 @@
+[console_scripts]
+medrical = medrical.cli.cli:medrical
+medrical-configure = medrical.config.config:configure
+
