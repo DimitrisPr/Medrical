@@ -16,7 +16,7 @@ def produce(topic_name, patient):
 
         Args:
             topic (str): The name of the topic (default: 'biometrics_default')
-            patient (Patient): An Patient object
+            patient (Patient): A Patient object
     '''
 
     global delivered_status
