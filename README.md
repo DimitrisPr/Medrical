@@ -177,7 +177,7 @@ The following table presents briefly each medical submodule
 | medrical/config/schemas | This directory stores the value and key AVRO schemas |
 | tests/ | This module includes all the unit tests |
 | tests/test_producer.py | Test that verifies that the producer publishes the topics succesfully to Kafka. |
-| tests/test_connector.py | Tests that verifies whether a postgreSQL table is auto-created when the producer publishes a new topic. |
+| tests/test_connector.py | Test that verifies whether a postgreSQL table is auto-created when the producer publishes a new topic. |
                                                                                                       
 
 
