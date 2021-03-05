@@ -11,8 +11,6 @@
 [![Built on](https://img.shields.io/badge/Personal-Website-Green)](https://prasakis.com/medrical) [![Built on](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/dimitrisprs/)  [![Built on](https://img.shields.io/github/followers/dimitrispr?style=social)](https://img.shields.io/badge/Build%20with-kafka-yellow) 
 
 # General
-
-This is a demonstration project for <a href="https://aiven.io"> Aiven </a>
  
 Medrical is a real-time medical metric monitoring system, powered by Apache Kafka and postgreSQL. It continuously monitors patient biometrics (e.g heart rate, body temprature, systolic & diastolic blood pressure) and publishes them to Kafka topics. A JDBC connector subscribes to those topics and stores them into a PostgreSQL DB table.  
  
